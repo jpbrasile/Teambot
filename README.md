@@ -35,4 +35,6 @@ Ceci est un logbook qui montre l'évolution de ce projet au fil du temps
 
 [Open Web UI](https://github.com/open-webui/open-webui) offre une interface utilisateur conviviale et extensible pour gérer des modèles de langage (LLM) en local, compatible avec les API d'OpenAI et Ollama. Il propose des fonctionnalités avancées telles que la prise en charge des plugins Python, la communication vocale/vidéo, et la génération d'images, tout en étant accessible sur divers appareils.
 
-[**MOOC pour se former aux agents (Autogen)**](https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/) 
+[**MOOC pour se former aux agents (Autogen)**](https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/)
+
+[Base](https://learn.deeplearning.ai/courses/ai-agentic-design-patterns-with-autogen/lesson/2/multi-agent-conversation-and-stand-up-comedy)
