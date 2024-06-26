@@ -10,4 +10,7 @@ Ceci est un logbook qui montre l'évolution de ce projet au fil du temps
   `docker pull ollama/ollama:latest`
   `docker run -d -p 11434:11434 ollama/ollama:latest`
 
-  Nous avons un problème de connexion au serveur à résoudre quand on lance perplexica.
+  Nous avons un problème de connexion au serveur à résoudre quand on lance perplexica.L'erreur provenait de l'absence de crédit sur openai. J'utilse Groq llama70b moins cher et plus rapide à mettre dans les paramètres de Perplexica. L'IHM est analgue à celui de Perplexity mais fonctionne en local, les requètes web sont anonymisées.
+
+  ![image](https://github.com/jpbrasile/Teambot/assets/8331027/bde4c7f5-dc9a-4c86-a3bc-9d475a334f74)
+
