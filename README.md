@@ -1,5 +1,13 @@
 # Teambot
 
+**Executive summary**
+Pour améliorer la productivité, la première étape consiste à vérifier si notre besoin n'est pas déjà couvert par ailleurs et accessible sur le Web.
+- Perplexity permet de faire ce type de recherche mais n'étant pas open source on ne peut automatiser sa mise en oeuvre et le traitement des données collectées.
+- Perplexica est son équivalent open source que nous avons installé en local. Le logiciel doit néanmoins être adapté pour permettre le traitement des données collectées.
+- Continue est un logiciel open source permettant de faire une telle adaptation
+ 
+
+
 L'objectif est de créer un assistant apte à améliorer la productivité d'une équipe travaillant sur un projet.
 Ceci est un logbook qui montre l'évolution de ce projet au fil du temps
 **26/06/2024**
@@ -38,3 +46,7 @@ Ceci est un logbook qui montre l'évolution de ce projet au fil du temps
 [**MOOC pour se former aux agents (Autogen)**](https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/)
 
 [Base](https://learn.deeplearning.ai/courses/ai-agentic-design-patterns-with-autogen/lesson/2/multi-agent-conversation-and-stand-up-comedy)
+
+**27/06/2024**
+- Il nous faut pouvoir modifier le programme Perplexica disponible sur Github
+- [continue](https://github.com/continuedev/continue) peut analyser et adapter le programme
