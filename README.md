@@ -50,3 +50,24 @@ Ceci est un logbook qui montre l'évolution de ce projet au fil du temps
 **27/06/2024**
 - Il nous faut pouvoir modifier le programme Perplexica disponible sur Github
 - [continue](https://github.com/continuedev/continue) peut analyser et adapter le programme
+
+**28/06/2024**
+... malheureusement _continue_ ne possède pas d'API. Nous avons trouvé une alternative: 
+
+**Résumé du besoin :**
+
+Vous souhaitez automatiser l'utilisation de la commande @codebase de l'assistant de codage Continue, afin d'analyser automatiquement un référentiel entier de code. Vous cherchez une solution pour intégrer cette fonctionnalité dans un programme Python.
+
+**Proposition de solution :**
+
+Bien que l'automatisation directe de @codebase via un programme Python ne soit pas une fonctionnalité standard de Continue, voici une approche alternative que vous pourriez envisager :
+- Utilisez un script Python pour consolider tout le contenu du référentiel dans un seul fichier texte, en préservant la structure des chemins de fichiers.
+- Employez un modèle de langage large (LLM) avec une grande fenêtre de contexte, comme DeepSeek Coder V2, qui peut traiter de grandes quantités de code.
+- Créez une interface en Python pour interagir avec le LLM, lui permettant d'analyser le fichier consolidé et de répondre à des questions sur le code.
+- Intégrez un agent de recherche web pour compléter les informations manquantes si nécessaire.
+  
+Cette approche vous permettrait d'obtenir une fonctionnalité similaire à @codebase, mais de manière automatisée et intégrée à votre programme Python. Cela vous donnerait la flexibilité d'analyser l'ensemble du référentiel et d'interagir avec le code de manière programmatique.
+
+[Sonnet 3.5 donne le code](https://claude.ai/chat/aa8d87af-aa47-41ad-b364-d082ba649184)
+
+Le fichier généré est trop important pour être exploité  par sonnet 3.5 et ChatGPTo. Nous téléchargeons deepseekcoder (contexte de 100 k) 
