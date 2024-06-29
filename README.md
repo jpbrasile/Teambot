@@ -71,3 +71,8 @@ Cette approche vous permettrait d'obtenir une fonctionnalité similaire à @code
 [Sonnet 3.5 donne le code](https://claude.ai/chat/aa8d87af-aa47-41ad-b364-d082ba649184)
 
 Le fichier généré est trop important pour être exploité  par sonnet 3.5 et ChatGPTo. Nous téléchargeons deepseekcoder (contexte de 100 k) 
+
+**29/06/2024**
+- Abonnement à Antropic pro afin d'avoir un fonctionneemnt de sonnet 3.5 optimal (200 k de contexte).
+- Répertoire TeambotV1 crée avec Perplexica fonctionnel 
+- Nous avons relancé une adaptation de perplexica pour récupérer les données en local avec succès grâce à [sonnet 3.5](https://claude.ai/chat/5a6553cd-6040-459d-98c5-d37b1dc359a5).
