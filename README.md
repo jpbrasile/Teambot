@@ -58,13 +58,19 @@ Le bot doit pouvoir :
 - **Prendre** des données :
   - Fichiers locaux
   - Speech-to-text
-  - Image/vidéo to text
-  - Via internet
+  - Image/vidéo to text (en particulier vidéos youtube)
+  - Via internet (en particulier assimilation des codes disponibles sur Github)
+    
 - **Assimiler** les données :
   - Dans sa mémoire à court terme (contexte)
   - Dans sa mémoire à long terme (RAG)
   - Dans ses "gènes" (fine-tuning)
+    
 - **Activer** des ressources spécifiques (function calling)
+  
+- **Créer et utiliser des outils** soit disponible sur API (gorilla) soit qu'il crée lui même en les programmant
+  
+- **Créer des agents** susceptible de devenir expert dans un domaine donné grâce à sa capacité d'apprentissage et à la maîtrise d'outils appropriés 
 
 ## Principes fondamentaux
 
@@ -88,17 +94,19 @@ S'inspirer des frameworks existants :
 
 ### Assimilation rapide
 - [Llama-3-8B-Instruct-Gradient-1048k](https://huggingface.co/spaces/Cyleux/Llama-3-8B-Instruct-Gradient-1048k) : Capable d'assimiler rapidement 1 million de tokens.
-
+  - Nous l'avons installé sur Lmstudio. Il n'est pas très intelligent ni instruit ...
+    
 ### Production de code
 - [Codestral](https://mistral.ai/news/codestral/) : 32k contexte, 81.1 sur HumanEval.
 
 ### Meilleurs LLM actuels
 - Via API : [Claude 3.5 Sonnet](https://apidog.com/blog/claude-3-5-api/)
+    - Abonnement pris
 - En local : [MoA (Mixture of Anthropic Models)](https://github.com/togethercomputer/MoA)
 
 ### Récupération de données sur le web
 - [Perplexica](https://github.com/ItzCrazyKns/Perplexica) : Similaire à Perplexity.
-
+  - Installation faie sur docker
 ## Techniques avancées
 
 ### Fine-tuning
