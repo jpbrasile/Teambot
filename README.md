@@ -19,6 +19,16 @@ Cependant, il n'existe pas actuellement d'environnement permettant un travail co
 
 Ce document établit le cahier des charges de Teambot et identifie les frameworks les plus pertinents pour sa mise en œuvre.
 
+[solution concurrente](https://abacus.ai/chat_llm-ent)
+  - 🤖 Introduction de ChatLLM : une plateforme tout-en-un pour accéder à plusieurs modèles de langage avancés.
+  - 📄 Capacité à télécharger et à analyser des PDF et autres documents pour générer des graphiques et des analyses.
+  - 🔗 Intégration avec des services tiers comme Slack et Google Drive pour plus de commodité.
+  - 💬 Création de chatbots personnalisés et d'agents IA déployables en production.
+  - 🌐 Fonctionnalités de recherche web, génération d'images, exécution de code, et création de graphiques.
+  - 📊 Utilisation de techniques de fine-tuning et de génération augmentée pour construire des chatbots adaptés à des bases de connaissances spécifiques.
+  - 🧑‍💻 Équipe de développement composée d'ingénieurs logiciels, d'experts en apprentissage machine, et de consultants en IA pour fournir des solutions IA pour les entreprises et les usages personnels.
+  - 🆓 Période d'essai gratuite d'un mois pour tester la plateforme avant de s'engager.
+
 ## Fonctionnalités principales
 
 ### 1. Workspace de travail
@@ -58,7 +68,7 @@ Le bot doit pouvoir :
 - **Prendre** des données :
   - Fichiers locaux
   - Speech-to-text
-  - Image/vidéo to text (en particulier vidéos youtube)
+  - Image/vidéo to text (en particulier vidéos YouTube) :GPT-4o  devrait avoir cette capacité dans un avenir proche mais [des astuces sont possibles dès aujourd'hui](https://chatgpt.com/share/3afc20a8-ac01-410a-9288-0059c99780e9) 
   - Via internet (en particulier assimilation des codes disponibles sur Github)
     
 - **Assimiler** les données :
@@ -68,9 +78,22 @@ Le bot doit pouvoir :
     
 - **Activer** des ressources spécifiques (function calling)
   
-- **Créer et utiliser des outils** soit disponible sur API (gorilla) soit qu'il crée lui même en les programmant
+- **Créer et utiliser des outils** soit disponible sur API (gorilla) soit qu'il crée lui même en créant le programme, en le lançant et en itérant suivant les erreurs rencontrées. 
   
-- **Créer des agents** susceptible de devenir expert dans un domaine donné grâce à sa capacité d'apprentissage et à la maîtrise d'outils appropriés 
+- **Créer des agents** susceptibles de devenir experts dans un domaine donné grâce à leur capacité d'apprentissage et à leur maîtrise d'outils dédiés.
+
+- **Exemple d'expertises utiles à Teambot**:
+  - [Expert en RAG](Generative AI/local-rag-ollama-mistral-chroma.py)
+  - Expert en modélisation Walk on Sphères pour l'optimisation d'objet 3D en électrostatique, magnétostatique, Navier/Stokes , thermique ...;
+  - Expert en ModelingToolkit (ModelingToolkit.jl est un cadre de modélisation pour les calculs symboliques-numériques à haute performance en informatique scientifique et en apprentissage automatique scientifique.) 
+  - Expert en Grasshopper pour la modélisation paramétrique d'objets complexes
+  - Expert en pilotage de convertisseur par microprocesseur
+  - Expert en jumeaux numériques
+  - Expert en web scaping (comme perplexica)
+  - [Expert en programmation](https://github.com/huangd1999/AgentCoder)
+  - [Expert en optimisation inverse](https://github.com/AI4Science-WestlakeU/cindm)
+  - [Expert en création d'agent en tant que service](https://github.com/run-llama/llama-agents?tab=readme-ov-file)
+  - ...
 
 ## Principes fondamentaux
 
@@ -106,7 +129,7 @@ S'inspirer des frameworks existants :
 
 ### Récupération de données sur le web
 - [Perplexica](https://github.com/ItzCrazyKns/Perplexica) : Similaire à Perplexity.
-  - Installation faie sur docker
+  - Installation faite sur Docker
 ## Techniques avancées
 
 ### Fine-tuning
@@ -220,3 +243,156 @@ Cependant, il faudra relever certains défis :
 - Mise en place d'un système d'évaluation robuste pour mesurer l'efficacité
 
 Cette approche innovante combine plusieurs technologies avancées (RAG, Sonnet, alignement de LLM) pour potentiellement créer un système plus performant et personnalisé.
+
+**01/07/2024**
+- **Web scraping :**
+  - [00:00](https://www.youtube.com/watch?v=KAvuVUh0XU8&t=0s) 🌐 Crawl4AI is an open-source, LM-friendly web crawler and scraper that supports multiple URLs, extracts media tags, and returns structured data in JSON format.
+  - [01:06](https://www.youtube.com/watch?v=KAvuVUh0XU8&t=66s) 📦 Using Crawl4AI simplifies web scraping by automating the process of defining elements, parsing data, and converting it into structured formats, integrated with AI agents.
+  - [02:56](https://www.youtube.com/watch?v=KAvuVUh0XU8&t=176s) 🛠️ You can initiate a basic crawl and extract data from a URL using just a few lines of Python code with Coll 4 AI, demonstrating its ease of use and efficiency.
+  - [04:48](https://www.youtube.com/watch?v=KAvuVUh0XU8&t=288s) 📊 Crawl4AI facilitates structured data extraction using LLM, allowing extraction of specific information like model names and pricing details from web pages.
+  - [06:37](https://www.youtube.com/watch?v=KAvuVUh0XU8&t=397s) 🤖 Integrating Crawl4AI with AI agents such as web scraper, data cleaner, and data analyzer agents automates data extraction, cleaning, and analysis processes, generating detailed reports.
+ 
+- **[Function calling LLM Benchmark](https://gorilla.cs.berkeley.edu/leaderboard.html)** : Gorilla est un très bon compromis open source et Sonnet 3.5 le meilleur à ce jour
+- **Conversion de fichier au format Markdown :**
+  -  [00:00](https://youtu.be/8446xEEq8RI?t=0s) 🛠️ Introduction à AutoMD
+
+  - Présentation d'AutoMD, un outil Python pour convertir des fichiers en documents Markdown prêts pour LLM.
+  - AutoMD est gratuit et fonctionne localement.
+
+  - [01:23](https://youtu.be/8446xEEq8RI?t=83s) 📂 Fonctionnalités d'AutoMD
+  
+    - Supporte plusieurs types de fichiers et dossiers zip.
+    - Génère des fichiers Markdown individuels ou multiples avec métadonnées et table des matières.
+  
+  - [02:16](https://youtu.be/8446xEEq8RI?t=136s) 📝 Formats de fichiers pris en charge
+  
+    - Supporte de nombreuses extensions de fichiers comme JSON, CSS, etc.
+    - Mise à jour régulière des extensions supportées.
+  
+  - [03:25](https://youtu.be/8446xEEq8RI?t=205s) ⚙️ Installation d'AutoMD
+  
+    - Instructions pour installer AutoMD et créer un environnement Python.
+    - Exemple de clonage et ouverture de projet dans VS Code.
+  
+  - [06:17](https://youtu.be/8446xEEq8RI?t=377s) 📁 Utilisation de l'interface utilisateur
+  
+    - Téléchargement de fichiers et sélection des options de sortie.
+    - Processus de génération des fichiers Markdown avec table des matières et métadonnées.
+  
+  - [08:02](https://youtu.be/8446xEEq8RI?t=482s) 🔍 Conclusion et démonstration finale
+  
+    - Visualisation des fichiers générés avec les différentes métadonnées et contenu formaté.
+    - Encouragement à tester l'outil et partage des retours.
+   
+  - **coding engineer**:
+    - [00:00](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=0s) 🖥️ Introduction to Claude Engineer
+      - Overview of Claude Engineer capabilities,
+      - Describes how it assists in coding tasks, 
+      - Example of creating a YouTube video downloader script.
+    - [02:06](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=126s) 🛡️ Importance of Safety and Confirmation
+      - Emphasis on the need for user confirmation in coding,
+      - Discussion on safety measures to prevent unintended actions,
+      - Mention of potential issues with agents and illegal activities.
+    - [03:56](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=236s) 🎯 Enhancements and Future Projects
+      - Demonstrates the flexibility of modifying scripts,
+      - Transition to working on new projects like HTML and CSS,
+      - Highlights of ongoing trends in AI tools and automation.
+    - [05:06](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=306s) 🎮 Snake Game Implementation
+      - Creation of a Snake game using Claude Engineer,
+      - Explanation of the steps involved in setting up and running the game,
+      - Insights into the capabilities of the tool in building functional applications.
+    - [07:22](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=442s) 🌉 Advancements in AI Models
+      - Discussion on the rapid progress of AI models,
+      - Theory on how Anthropic improves model intelligence,
+      - Reference to the Golden Gate Cloud experiment.
+    - [10:08](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=608s) 🏃‍♂️ Competitive Progress of AI Companies
+      - Comparison of Anthropic and OpenAI approaches,
+      - Speculation on the future of AI model capabilities,
+      - Reflection on the balance between user experience and model improvement.
+    - [12:10](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=730s) 🚀 Exponential Improvement in AI Utility
+      - Concept of users becoming more efficient with better AI tools,
+      - Analogy of AI tools enhancing user capabilities like driving a better car,
+      - Importance of adapting to and leveraging advanced AI technologies.
+    - [14:56](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=896s) 🔧 Building and Using Advanced AI Tools
+      - Example of winning a developer challenge with AI assistance,
+      - Preview of upcoming live app projects,
+      - Insights into the practical applications and future potential of AI tools.
+    - [18:06](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=1086s) 📑 Workflow and Development with Claude Engineer
+      - Explanation of the workflow used to build Claude Engineer,
+      - Demonstration of using Claude for function calls and documentation,
+      - Step-by-step guide on starting a new project with Claude.
+    - [20:31](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=1231s) 📚 Importance of Training Data
+      - Emphasizing the necessity of knowing what's in the training data,
+      - Using documentation to ensure model accuracy.
+    - [21:13](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=1273s) 🔄 Best Practices for Function Calls
+      - Describing function calling procedures,
+      - Importance of running tools twice for verification.
+    - [23:00](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=1380s) 🧪 Testing and Experimentation
+      - Creating and testing scripts quickly,
+      - Demonstrating function calling with weather data.
+    - [24:11](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=1451s) 🚀 Encouraging Experimentation
+      - Motivating viewers to start building projects,
+      - Highlighting the ease of using AI tools for programming.
+    - [24:38](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=1478s) ❓ Community Engagement
+      - Answering community questions,
+      - Promoting community involvement in AI development.
+    - [25:07](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=1507s) 💡 Surprising Use Cases and Future Plans
+      - Discussing unexpected use cases of Cloud Engineer,
+      - Future functionalities and improvements.
+    - [26:00](https://www.youtube.com/watch?v=tq9yN-j5o3M&t=1560s) 💼 Advice for AI Entrepreneurs
+      - Encouraging solo entrepreneurs to build what resonates with them,
+      - Importance of creating consumer-friendly AI tools.
+     
+
+     
+    - [**Générateur de voix text to speech 2024**](https://www.youtube.com/watch?v=u5QnjiCRRmU):
+      - 🎙️ Text to Speech Open AI est un outil de synthèse vocale gratuit de haute qualité.
+      - 💸 Ce logiciel coûte seulement 6 $ pour une version payante, moins cher que d'autres outils similaires.
+      - 📱 Il est accessible sur mobile et propose des voix réalistes avec des options d'émotion.
+      - 🌐 L'interface est facile à utiliser : il suffit de chercher "text to speech open AI" sur Google.
+      - 🎧 Chaque chaîne YouTube peut choisir une voix adaptée à son contenu, comme une voix motivante ou amusante.
+      - 🖋️ Vous pouvez copier votre script, choisir la vitesse et la qualité audio, et générer jusqu'à 3000 mots gratuitement.
+      - 🎶 Le logiciel Audacity peut être utilisé pour améliorer la qualité sonore de la voix générée.
+      - 🗣️ L'outil permet également de créer des dialogues engageants entre plusieurs personnages.
+    - [**Agent codeur**:](https://github.com/huangd1999/AgentCoder)
+      - 🤖 Trois agents : AgentCoder utilise un agent programmeur, un agent concepteur de tests et un agent exécuteur de tests pour générer et tester du code.
+      - 🌟 Performance supérieure : AgentCoder surpasse les modèles de LLM existants dans divers scénarios de codage.
+      - 📈 Amélioration des résultats : AgentCoder augmente le pass@1 à 77.4% et 89.1% sur les ensembles de données HumanEval-ET et MBPP-ET.
+      - 🔄 Format de sortie : Les agents suivent un format de sortie spécifique pour une analyse précise par l'agent exécuteur.
+    - [**Création automatique d'agents**](https://github.com/jgravelle/AutoGroq)
+      - 🤖 Introduction d'AutoGroq™ et son rôle dans la création d'agents IA.
+      - 🖥️ Les agents IA sont des programmes informatiques autonomes.
+      - 🚀 AutoGroq™ facilite la création d'agents IA pour les utilisateurs.
+      - 🔄 Méthode standard vs. AutoGroq™ : résoudre d'abord le problème, puis créer l'agent spécialisé.
+      - 🧩 Agents personnalisables : modification, ajout de compétences, apprentissage.
+      - 🌐 Collaboration automatique des agents grâce à AutoGroq™ et autogen.
+      - 🏗️ AutoGroq™ comme plateforme de construction et de test.
+      - 🌍 Applications réelles et environnement de déploiement via autogen.
+    - [**Monitoring des agents**](https://github.com/AgentOps-AI/agentops):
+      - 🖥️ Présentation des défis des agents IA : coût, latence et observabilité.
+      - 📊 Importance de la surveillance, des tests et des analyses pour les agents IA.
+      - 🛠️ Configuration initiale et gestion des clés API pour AgentOps.
+      - 🧩 Intégration de Crew AI avec AgentOps pour la surveillance des agents.
+      - 📝 Développement du code pour initialiser et surveiller les agents IA.
+      - 🔄 Définition des rôles et des tâches pour les agents Crew AI.
+      - 🚀 Lancement et résultats de l'exécution des agents avec AgentOps.
+      - 📢 Conclusion, encouragement à s'abonner et rejoindre la communauté Discord.    - [**Monitoring des agents**](https://github.com/AgentOps-AI/agentops):
+      - 🖥️ Présentation des défis des agents IA : coût, latence et observabilité.
+      - 📊 Importance de la surveillance, des tests et des analyses pour les agents IA.
+      - 🛠️ Configuration initiale et gestion des clés API pour AgentOps.
+      - 🧩 Intégration de Crew AI avec AgentOps pour la surveillance des agents.
+      - 📝 Développement du code pour initialiser et surveiller les agents IA.
+      - 🔄 Définition des rôles et des tâches pour les agents Crew AI.
+      - 🚀 Lancement et résultats de l'exécution des agents avec AgentOps.
+      - 📢 Conclusion, encouragement à s'abonner et rejoindre la communauté Discord.
+    - [**Autogen update**](https://www.youtube.com/watch?v=ymz4RIUIask)
+      - [00:00] 🧠 Microsoft AutoGen a reçu une mise à jour majeure pour les tâches complexes et l'amélioration des performances des agents.
+      - [00:11] 🔧 AutoGen est un cadre de conversation multi-agent open source pour les applications de modèles de langage.
+      - [00:40] 🚀 La mise à jour permet la collaboration entre agents pour accomplir des tâches multi-étapes plus efficacement que les solutions à agent unique.
+      - [02:20] 💡 Adam Fourney de Microsoft a présenté cette amélioration en montrant comment les agents peuvent surpasser les solutions précédentes sur des benchmarks.
+      - [02:59] 👥 Les agents peuvent se spécialiser et utiliser divers outils, permettant une meilleure génération pour des tâches complexes.
+      - [05:00] 🔍 Exemple : résoudre des tâches complexes en utilisant une base de données, illustré par une recherche sur les crocodiles non indigènes en Floride.
+      - [07:04] 🌐 AutoGen est open source et disponible sur GitHub.
+      - [09:26] 📈 Les futurs développements incluent des agents capables d'apprendre et de s'améliorer, avec une meilleure compréhension des images et des captures d'écran.
+     
+   
