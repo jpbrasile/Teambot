@@ -152,6 +152,7 @@ Pour améliorer la productivité, la première étape consiste à vérifier si n
 
 # Logbook
 Ceci est un logbook qui montre l'évolution de ce projet au fil du temps
+
 **26/06/2024**
 - Notre premier objectif est de rapatrier des données issues du web pour rendre le LLM plus expert dans unn domaine donné.
 - Cela est possible avec le logiciel perplexity (payant dans sa version pro) mais comme nous utiliserons son équivalent opensource [perplexica](https://github.com/ItzCrazyKns/Perplexica)
@@ -396,3 +397,5 @@ Cette approche innovante combine plusieurs technologies avancées (RAG, Sonnet, 
       - [09:26] 📈 Les futurs développements incluent des agents capables d'apprendre et de s'améliorer, avec une meilleure compréhension des images et des captures d'écran.
      
    
+- Extraction des données de Perplexica avec
+  `(teambot) PS C:\Users\test\Documents\TeambotV1\temp_repo> python .\url-extractor-debug.py`. La requète à Perplexica est faite via http://localhost:3000/`
