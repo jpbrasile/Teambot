@@ -147,6 +147,7 @@ Pour améliorer la productivité, la première étape consiste à vérifier si n
 - Perplexity permet de faire ce type de recherche mais n'étant pas open source on ne peut automatiser sa mise en oeuvre et le traitement des données collectées.
 - Perplexica est son équivalent open source que nous avons installé en local. Le logiciel a été adapté pour permettre le traitement des données collectées.
 - Nous allons dans un premier temps utiliser "sonnet 3.5" qui est le meilleur LLM actuel. Nous avons souscrit à la version pro et à l'utilisation via API de ce logiciel.
+- Nous avons également implémenté une variante de GPT-Research (fonctionnant avec sonnet3.5, Haiku et les embedding OpenAi). Cette variante permet de faire un rapport au format markdown à partir d'une simple requête **dans un script python**
  
 
 
