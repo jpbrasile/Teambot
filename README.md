@@ -396,6 +396,72 @@ Cette approche innovante combine plusieurs technologies avancées (RAG, Sonnet, 
       - [07:04] 🌐 AutoGen est open source et disponible sur GitHub.
       - [09:26] 📈 Les futurs développements incluent des agents capables d'apprendre et de s'améliorer, avec une meilleure compréhension des images et des captures d'écran.
      
+      **02/07/2024**
+  - Extraction des données de Perplexica avec:
+      
+  `(teambot) PS C:\Users\test\Documents\TeambotV1\temp_repo> python .\url-extractor-debug.py`. La requète à Perplexica est faite via `http://localhost:3000/`
+
+  -[**GPT Researcher**](https://docs.gptr.dev/docs/gpt-researcher/introduction) est un équivalent à Perplexica
+
+    - L'adaptation de ce logiciel pour utiliser les LLM Antropic (sonnet 3.5 et Haiku) a été faite.
+    - Il faut conserver l'abonneement à openai pour la création de l'embedding 
+    - Lancement avec `(teambot) PS C:\Users\test\Documents\TeambotV1\gpt-researcher> uvicorn main:app --reload`
+    - Aller sur `http://localhost:8000/#form`pour le lancer
+
+    - **Modifications effectuées pour pouvoir utiliser GPT-Resercher avec un script Python:**
+
+[Le fil de la discussion avec sonnet 3.5](https://claude.ai/chat/49d8dd3c-e666-4851-ba3e-835da8377163)
+
+      1. Transition vers Anthropic :
+         - Remplacement des appels à l'API OpenAI par des appels à l'API Anthropic.
+         - Mise à jour des variables d'environnement pour utiliser la clé API Anthropic.
+         - Adaptation du code pour utiliser le format de requête spécifique à Anthropic.
+      
+      2. Ajout de capacités API :
+         - Création d'un nouvel endpoint API dans `server.py` pour permettre les requêtes de recherche via HTTP.
+         - Modification de `WebSocketManager` pour fonctionner avec et sans connexion WebSocket.
+         - Adaptation des classes `BasicReport` et `DetailedReport` pour gérer les cas sans WebSocket.
+      
+      3. Mise à jour de la génération de rapports :
+         - Remplacement de la bibliothèque de conversion PDF problématique par ReportLab pour une meilleure compatibilité.
+         - Simplification du processus de génération de PDF pour éviter les dépendances système complexes.
+      
+      Guide de démarrage rapide :
+      
+      1. Configuration :
+         - Clonez le repository GPT-Researcher.
+         - Créez un fichier `.env` à la racine du projet avec votre clé API Anthropic :
+           ```
+           ANTHROPIC_API_KEY=votre_clé_api_ici
+           ```
+      
+      2. Installation :
+         - Installez les dépendances : `pip install -r requirements.txt`
+         - Installez ReportLab : `pip install reportlab`
+      
+      3. Lancement du serveur :
+         - Exécutez : `python main.py`
+         - Le serveur démarrera sur `http://localhost:8000`
+      
+      4. Utilisation de l'API (voir l'exemple test_api.py):
+         - Envoyez une requête POST à `http://localhost:8000/api/research` avec un corps JSON :
+           ```json
+           {
+             "task": "Votre question de recherche ici",
+             "report_type": "research_report",
+             "agent": "RecommendedAgent"
+           }
+           ```
+         - La réponse inclura le rapport et les chemins des fichiers générés (PDF, DOCX, MD).
+      
+      5. Utilisation de l'interface Web :
+         - Ouvrez un navigateur et accédez à `http://localhost:8000`
+         - Utilisez l'interface pour saisir votre question et obtenir des résultats en temps réel.
+      
+      6. Dépannage :
+         - Vérifiez les logs du serveur pour les erreurs éventuelles.
+         - Assurez-vous que votre clé API Anthropic est valide et correctement configurée.
+      
+      Ce guide devrait vous permettre de démarrer rapidement avec la version modifiée de GPT-Researcher utilisant Anthropic et offrant des capacités d'API.
    
-- Extraction des données de Perplexica avec
-  `(teambot) PS C:\Users\test\Documents\TeambotV1\temp_repo> python .\url-extractor-debug.py`. La requète à Perplexica est faite via http://localhost:3000/`
+
