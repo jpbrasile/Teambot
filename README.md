@@ -464,5 +464,11 @@ Cette approche innovante combine plusieurs technologies avancées (RAG, Sonnet, 
          - Assurez-vous que votre clé API Anthropic est valide et correctement configurée.
       
       Ce guide devrait vous permettre de démarrer rapidement avec la version modifiée de GPT-Researcher utilisant Anthropic et offrant des capacités d'API.
+
+  **3/07/2024**
+  - Pour coder en open source : CodeQwen1.5 ![image](https://github.com/jpbrasile/Teambot/assets/8331027/d321df22-7bc7-40e8-8ebb-4f8129c1a0a4)
+
+    
+      
    
 
