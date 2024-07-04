@@ -148,6 +148,10 @@ Pour améliorer la productivité, la première étape consiste à vérifier si n
 - Perplexica est son équivalent open source que nous avons installé en local. Le logiciel a été adapté pour permettre le traitement des données collectées.
 - Nous allons dans un premier temps utiliser "sonnet 3.5" qui est le meilleur LLM actuel. Nous avons souscrit à la version pro et à l'utilisation via API de ce logiciel.
 - Nous avons également implémenté une variante de GPT-Research (fonctionnant avec sonnet3.5, Haiku et les embedding OpenAi). Cette variante permet de faire un rapport au format markdown à partir d'une simple requête **dans un script python**
+- La suite concernera:
+  - La mise en place d'un outil de codage performant (sonnet 3.5 avec agent, recherche web, itération en cas d'erreur + explorer tout un repository Github.
+  - L'évaluation de RAGGraph (car l'augementation du contexte a ses limites)
+  - Open Interpreter avec une vision locale (VisionLLM semble un bon candidat) 
  
 
 
@@ -466,8 +470,81 @@ Cette approche innovante combine plusieurs technologies avancées (RAG, Sonnet, 
       Ce guide devrait vous permettre de démarrer rapidement avec la version modifiée de GPT-Researcher utilisant Anthropic et offrant des capacités d'API.
 
   **3/07/2024**
-  - Pour coder en open source : CodeQwen1.5 ![image](https://github.com/jpbrasile/Teambot/assets/8331027/d321df22-7bc7-40e8-8ebb-4f8129c1a0a4)
+- Pour coder en open source : CodeQwen1.5 ![image](https://github.com/jpbrasile/Teambot/assets/8331027/d321df22-7bc7-40e8-8ebb-4f8129c1a0a4)
+- [ScrapeGraphAI](https://github.com/VinciGit00/Scrapegraph-ai?tab=readme-ov-file).
+      ### 💻 Utilisation
+      Plusieurs pipelines de scraping standard peuvent être utilisés pour extraire des informations d'un site web (ou d'un fichier local) :
+      
+      - **SmartScraperGraph** : Scraper de page unique qui nécessite seulement une invite utilisateur et une source d'entrée.
+      - **SearchGraph** : Scraper multi-pages qui extrait des informations des n premiers résultats de recherche d'un moteur de recherche.
+      - **SpeechGraph** : Scraper de page unique qui extrait des informations d'un site web et génère un fichier audio.
+      - **ScriptCreatorGraph** : Scraper de page unique qui extrait des informations d'un site web et génère un script Python.
+      - **SmartScraperMultiGraph** : Scraper multi-pages qui extrait des informations de plusieurs pages à partir d'une seule invite et d'une liste de sources.
+      - **ScriptCreatorMultiGraph** : Scraper multi-pages qui génère un script Python pour extraire des informations de plusieurs pages à partir d'une seule invite et d'une liste de sources.
+      
+      Il est possible d'utiliser différents modèles de langage (LLM) via des API, telles que OpenAI, Groq, Azure et Gemini, ou des modèles locaux utilisant Ollama.
+      
+      - Une évaluation de ScrapeGraphAI est disponible en ligne [ici](https://scrapegraph-ai-web-dashboard.streamlit.app/)
+- [**The pi.pe**](https://github.com/emcf/thepipe)
+  - Extrait du contenu en markdown et des visuels à partir des URLs de PDFs, documents, présentations, vidéos, et plus encore, prêt pour les modèles de langage multimodaux (LLMs).
+  - Utile pour une récupération multimodale de document comme Arxiv avec l'exploitation des figures et des tables.
 
+- [**Quel LLM pour "voir" une vidéo**](https://video-mme.github.io/home_page.html#leaderboard)
+  - [![image](https://github.com/jpbrasile/Teambot/assets/8331027/20a48fdd-9e4d-41dc-a769-925a145df504)](https://encord.com/blog/gpt-4-vision-alternatives/#:~:text=Alternatives%20to%20GPT%2D4%20Vision,-Open%20source%20alternatives&text=four%20popular%20alternatives%3A-,LLaVa%201.5,BakLLaVa)
+  - [https://github.com/OpenGVLab/InternVL](https://internvl.opengvlab.com/) est un bon candidat. Test en ligne possible via l'hyperlien. Voir aussi [ici](https://huggingface.co/OpenGVLab/InternVL-Chat-V1-5)
+  - Sonnet 3.5 reste un bon compromis performance/prix mais ne permet pas d'extraire la bounding box
+  ![image](https://github.com/jpbrasile/Teambot/assets/8331027/7298d0ab-5281-48a1-b3e3-0b053d5bd245)
+
+- Taskgen
+    ### Résumé du projet TaskGen
+    
+    **TaskGen** est un cadre agentique basé sur les tâches, utilisant StrictJSON comme noyau. Ce projet open-source vise à fournir une méthode efficace pour exécuter des tâches en utilisant des agents alimentés par des modèles de langage (LLM). Voici les principales capacités et forces de TaskGen :
+    
+    #### Fonctionnalités Clés
+    
+    - **Division des Tâches** : Les tâches sont divisées en sous-tâches pour des solutions plus ciblées.
+    - **Agent Unique** : Fonctionne avec des fonctions LLM et des fonctions externes.
+    - **MétaAgent** : Utilise des agents internes comme fonctions pour des tâches complexes.
+    - **Variables Partagées** : Support multi-modalité pour un contexte global et des variables persistantes.
+    - **Génération Augmentée par Récupération (RAG)** : Utilise la récupération sur l'espace des fonctions pour une génération de contenu améliorée.
+    - **Mémoire** : Fournit des invites supplémentaires basées sur les tâches précédentes pour améliorer la cohérence des tâches.
+    - **Mode Asynchrone** : Support pour l'agent asynchrone, les fonctions et strict_json.
+    
+    #### Avantages de la Messagerie JSON
+    
+    - **Format JSON** : Aide à la génération de la chaîne de pensée naturellement et est moins verbeux que le texte libre.
+    - **Analyse Naturelle** : Permet une analyse naturelle de multiples champs de sortie par les agents.
+    - **StrictJSON** : Assure que tous les champs de sortie sont présents et au bon format pour le traitement en aval.
+    
+    #### Utilisation et Exemples
+    
+    - **Installation** : `pip install taskgen-ai`
+    - **Configuration** : Configuration de la clé API OpenAI et importation des fonctions nécessaires.
+    - **Création d'Agent** : Créez un agent et exécutez des tâches en divisant les tâches assignées en sous-tâches.
+    - **Réponse de l'Agent** : Les agents fournissent des réponses basées sur les résultats des sous-tâches exécutées.
+    
+    #### Avantages par rapport à AutoGen
+    
+    - **Efficacité** : TaskGen est moins verbeux et plus ciblé que les cadres agentiques basés sur la conversation comme AutoGen.
+    - **Flexibilité** : Permet l'utilisation de fonctions externes et d'agents internes pour une grande variété de tâches.
+    - **Mémoire et Contexte Global** : Utilise des variables partagées et une mémoire pour améliorer la cohérence et la performance des agents.
+  
+    Pour plus d'informations, visitez le [dépôt GitHub de TaskGen](https://github.com/simbianai/taskgen).
+
+**4/7/2024**
+- [VisionLLM](https://github.com/OpenGVLab/VisionLLM): permet d'éffectuer une centaine de tâches distinctes à partir d'une image et d'un prompt.
+- **Fabric** :Fabric est un framework open-source destiné à augmenter les capacités humaines grâce à l'IA. Voici ses principales fonctionnalités :
+
+1. **Collection et intégration de prompts** : Appelés Patterns, pour diverses activités personnelles et professionnelles.
+2. **Modularité** : Inclut des composants comme le Mill (serveur optionnel), les Patterns (prompts spécifiques) et les Stitches (enchaînements de Patterns).
+3. **Compatibilité** : Fonctionne avec divers modèles d'IA, y compris OpenAI et autres serveurs compatibles.
+4. **Utilisation de Markdown** : Assure une lisibilité et une modifiabilité maximales des Patterns.
+5. **Agents d'IA** : Intègre PraisonAI pour automatiser des tâches complexes.
+6. **Outils auxiliaires** : Pour extraire des transcriptions YouTube, transcrire des fichiers audio, etc.
+
+Fabric facilite l'intégration de l'IA dans la vie quotidienne en rendant les prompts accessibles et utilisables.
+
+   
     
       
    
