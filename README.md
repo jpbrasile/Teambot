@@ -560,17 +560,17 @@ Fabric facilite l'intégration de l'IA dans la vie quotidienne en rendant les pr
 **🤖 Claude Engineer**
 Claude Engineer est une interface en ligne de commande (CLI) interactive qui exploite la puissance du modèle Claude-3.5-Sonnet d'Anthropic pour aider aux tâches de développement logiciel. Cet outil combine les capacités d'un grand modèle de langage avec des opérations pratiques sur le système de fichiers et des fonctionnalités de recherche sur le web.
 
-✨ Fonctionnalités
-💬 Interface de chat interactive avec Claude-3.5-Sonnet
-📁 Opérations sur le système de fichiers (création de dossiers, fichiers, lecture/écriture de fichiers)
-🔍 Capacités de recherche sur le web utilisant l'API Tavily
-🌈 Surlignage de la syntaxe pour les extraits de code
-🏗️ Création et gestion de la structure de projet
-🧐 Analyse de code et suggestions d'amélioration
-🖼️ Prise en charge des capacités de vision via le glisser-déposer d'images dans le terminal
-🚀 Mode automatique pour l'exécution autonome des tâches
-🔄 Suivi des itérations en mode automatique
-📊 Édition de fichiers basée sur les différences pour des modifications de code précises
+- ✨ Fonctionnalités
+- 💬 Interface de chat interactive avec Claude-3.5-Sonnet
+- 📁 Opérations sur le système de fichiers (création de dossiers, fichiers, lecture/écriture de fichiers)
+- 🔍 Capacités de recherche sur le web utilisant l'API Tavily
+- 🌈 Surlignage de la syntaxe pour les extraits de code
+- 🏗️ Création et gestion de la structure de projet
+- 🧐 Analyse de code et suggestions d'amélioration
+- 🖼️ Prise en charge des capacités de vision via le glisser-déposer d'images dans le terminal
+- 🚀 Mode automatique pour l'exécution autonome des tâches
+- 🔄 Suivi des itérations en mode automatique
+- 📊 Édition de fichiers basée sur les différences pour des modifications de code précises
 
 [**Open Interpreter**](openinterpreter.com)
 - 🌐 Open Interpreter fournit une interface en langage naturel pour les ordinateurs.
@@ -597,7 +597,7 @@ Claude Engineer est une interface en ligne de commande (CLI) interactive qui exp
 - 📷 Vision locale : Rendu d'images avec le modèle de vision Moondream et extraction OCR.
 - 🖱️ Mode OS local : Contrôle de la souris et du clavier, et interaction avec l'écran via le modèle Point.
 - 💡 Pourquoi Local ? : Promouvoir un accès privé et local aux agents d'IA puissants.
-.
+
 [**OpenDevin**](https://github.com/OpenDevin/OpenDevin)
 - 🤖 Agent IA autonome pour le développement logiciel
 - 🧠 Utilise des modèles de langage avancés comme GPT-4 par défaut
