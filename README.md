@@ -598,7 +598,20 @@ Claude Engineer est une interface en ligne de commande (CLI) interactive qui exp
 - 🖱️ Mode OS local : Contrôle de la souris et du clavier, et interaction avec l'écran via le modèle Point.
 - 💡 Pourquoi Local ? : Promouvoir un accès privé et local aux agents d'IA puissants.
 .
-
+[**OpenDevin**](https://github.com/OpenDevin/OpenDevin)
+- 🤖 Agent IA autonome pour le développement logiciel
+- 🧠 Utilise des modèles de langage avancés comme GPT-4 par défaut
+- 🛠️ Capable d'exécuter des tâches de programmation complexes
+- 👥 Collabore activement avec les développeurs humains sur des projets
+- 📝 Génère du code de manière autonome
+- 🐛 Détecte et corrige les bugs dans le code
+- ⚡ Optimise les programmes existants
+- 🔓 Projet open source et gratuit
+- 🔧 Configurable pour utiliser différents modèles de langage
+- 🖥️ Interface utilisateur avec serveurs backend et frontend
+- 📊 Performances supérieures aux agents IA précédents sur des benchmarks de codage
+- 🔬 Cadre d'évaluation simplifié pour tester les agents de codage
+- 🌱 En développement continu avec des améliorations régulières
 
 
 
