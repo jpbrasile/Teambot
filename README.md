@@ -533,7 +533,7 @@ Cette approche innovante combine plusieurs technologies avancées (RAG, Sonnet, 
 
 **4/7/2024**
 - [VisionLLM](https://github.com/OpenGVLab/VisionLLM): permet d'éffectuer une centaine de tâches distinctes à partir d'une image et d'un prompt.
-- **Fabric** :Fabric est un framework open-source destiné à augmenter les capacités humaines grâce à l'IA. Voici ses principales fonctionnalités :
+- [**Fabric**](https://github.com/danielmiessler/fabric?tab=readme-ov-file) :Fabric est un framework open-source destiné à augmenter les capacités humaines grâce à l'IA. Voici ses principales fonctionnalités :
 
 1. **Collection et intégration de prompts** : Appelés Patterns, pour diverses activités personnelles et professionnelles.
 2. **Modularité** : Inclut des composants comme le Mill (serveur optionnel), les Patterns (prompts spécifiques) et les Stitches (enchaînements de Patterns).
@@ -544,7 +544,21 @@ Cette approche innovante combine plusieurs technologies avancées (RAG, Sonnet, 
 
 Fabric facilite l'intégration de l'IA dans la vie quotidienne en rendant les prompts accessibles et utilisables.
 
-   
+
+- 🤖 Assistant IA alimenté par Claude 3.5 d'Anthropic pour des interactions en langage naturel
+- 🧑‍💻 Exécution de code Python sécurisée dans un environnement Jupyter Notebook
+- ⚛️ Création et rendu dynamiques de composants React en temps réel
+- 📁 Gestion intégrée des opérations de fichiers, incluant les téléversements et téléchargements
+- 📊 Visualisation avancée des données avec des bibliothèques comme matplotlib
+- 🛠️ Utilisation adaptative des outils, alternant entre Python, React et les opérations de fichiers
+- 🌐 Accès aux ressources web et possibilité de faire des requêtes API
+- 🔧 Interface intuitive et conviviale via Streamlit
+- 🐛 Gestion robuste des erreurs avec des messages clairs et explicatifs
+- 🖥️ Gestion flexible des paquets Python avec possibilité d'installation supplémentaire
+- 🔄 Diagramme de workflow en temps réel basé sur LangGraph
+
+Sources:
+- GitHub Repository "kturung/langgraph_streamlit_cod[1](https://github.com/kturung/langgraph_streamlit_codeassistant){: title="GitHub - kturung/langgraph_streamlit_codeassistant"}[2](https://github.com/kturung/langgraph_streamlit_codeassistant/blob/main/README.md){: title="langgraph_streamlit_codeassistant/README.md at main · kturung/langgraph_streamlit_codeassistant · GitHub"}[3](https://github.com/kturung/langgraph_streamlit_codeassistant/actions){: title="Actions · kturung/langgraph_streamlit_codeassistant · GitHub"}[4](https://github.com/kturung/langgraph_streamlit_codeassistant/pulls){: title="Pull requests · kturung/langgraph_streamlit_codeassistant · GitHub"}】【9†source】.
     
       
    
