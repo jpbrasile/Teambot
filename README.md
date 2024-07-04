@@ -557,8 +557,51 @@ Fabric facilite l'intégration de l'IA dans la vie quotidienne en rendant les pr
 - 🖥️ Gestion flexible des paquets Python avec possibilité d'installation supplémentaire
 - 🔄 Diagramme de workflow en temps réel basé sur LangGraph
 
-Sources:
-- GitHub Repository "kturung/langgraph_streamlit_cod[1](https://github.com/kturung/langgraph_streamlit_codeassistant){: title="GitHub - kturung/langgraph_streamlit_codeassistant"}[2](https://github.com/kturung/langgraph_streamlit_codeassistant/blob/main/README.md){: title="langgraph_streamlit_codeassistant/README.md at main · kturung/langgraph_streamlit_codeassistant · GitHub"}[3](https://github.com/kturung/langgraph_streamlit_codeassistant/actions){: title="Actions · kturung/langgraph_streamlit_codeassistant · GitHub"}[4](https://github.com/kturung/langgraph_streamlit_codeassistant/pulls){: title="Pull requests · kturung/langgraph_streamlit_codeassistant · GitHub"}】【9†source】.
+**🤖 Claude Engineer**
+Claude Engineer est une interface en ligne de commande (CLI) interactive qui exploite la puissance du modèle Claude-3.5-Sonnet d'Anthropic pour aider aux tâches de développement logiciel. Cet outil combine les capacités d'un grand modèle de langage avec des opérations pratiques sur le système de fichiers et des fonctionnalités de recherche sur le web.
+
+✨ Fonctionnalités
+💬 Interface de chat interactive avec Claude-3.5-Sonnet
+📁 Opérations sur le système de fichiers (création de dossiers, fichiers, lecture/écriture de fichiers)
+🔍 Capacités de recherche sur le web utilisant l'API Tavily
+🌈 Surlignage de la syntaxe pour les extraits de code
+🏗️ Création et gestion de la structure de projet
+🧐 Analyse de code et suggestions d'amélioration
+🖼️ Prise en charge des capacités de vision via le glisser-déposer d'images dans le terminal
+🚀 Mode automatique pour l'exécution autonome des tâches
+🔄 Suivi des itérations en mode automatique
+📊 Édition de fichiers basée sur les différences pour des modifications de code précises
+
+[**Open Interpreter**](openinterpreter.com)
+- 🌐 Open Interpreter fournit une interface en langage naturel pour les ordinateurs.
+- 📈 Permet d'exécuter du code (Python, Javascript, Shell, etc.) localement via une interface de type ChatGPT.
+- 🖥️ Peut créer et modifier des photos, vidéos, PDF, et plus encore.
+- 🌍 Accès complet à Internet sans restriction de taille de fichier ou de temps d'exécution.
+- 🔐 Exécution sécurisée avec demande de confirmation avant d'exécuter du code.
+- 🛠️ Installation et utilisation facile via la ligne de commande ou Python.
+- 🤝 Contribution de la communauté encouragée avec des directives de contribution claires.
+- 📋 Documentation complète disponible en ligne et hors ligne.
+- 🚀 Mode local avec support pour divers serveurs compatibles OpenAI.
+- 🔄 Historique des conversations sauvegardé et restauré pour une continuité des tâches.
+- 💻 Interface en langage naturel pour les ordinateurs, rendant la programmation accessible à tous.
+- 🐍 Majoritairement codé en Python (98.7%).
+- 🔒 Distribué sous licence AGPL-3.0, garantissant une sécurité élevée.
+- 📈 Permet de nouvelles méthodes de travail rapides et efficaces, avec des workflows simplifiés.
+- 🌐 Site web officiel : openinterpreter.com.
+- 📊 Statistiques et informations détaillées sur GitHub.
+- 🚀 Introduction de Local III : Liberté personnelle et accès privé à l'intelligence machine.
+- 🖥️ Explorateur local : Installation interactive pour sélectionner et télécharger des modèles.
+- 💬 Modèle i : Point d'accès gratuit servant Llama3-70B, contribuant à l'entraînement d'un modèle open-source.
+- 🤖 Intégration profonde avec Ollama : Commande unifiée pour accéder aux modèles Ollama.
+- ⚙️ Profils optimisés : Paramètres recommandés pour les modèles Codestral, Llama3 et Qwen.
+- 📷 Vision locale : Rendu d'images avec le modèle de vision Moondream et extraction OCR.
+- 🖱️ Mode OS local : Contrôle de la souris et du clavier, et interaction avec l'écran via le modèle Point.
+- 💡 Pourquoi Local ? : Promouvoir un accès privé et local aux agents d'IA puissants.
+.
+
+
+
+
     
       
    
