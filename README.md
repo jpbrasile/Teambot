@@ -614,8 +614,20 @@ Claude Engineer est une interface en ligne de commande (CLI) interactive qui exp
 - 🌱 En développement continu avec des améliorations régulières
 
 
+**5/7/2024**
+- [**Leaderboard SWE**](https://www.swebench.com/) : L'IA peut-t-elle résoudre des problèmes sur Github ?
+- [**Agentless**](https://github.com/OpenAutoCoder/Agentless) est une approche sans agent pour résoudre automatiquement les problèmes de développement logiciel. Pour résoudre chaque problème, Agentless suit un processus simple en deux phases : localisation et réparation.
 
-    
+  - 🙀 **Localisation** :
+    - Agentless utilise un processus hiérarchique pour localiser d'abord la faute dans des fichiers spécifiques.
+    - Ensuite, il identifie les classes ou fonctions pertinentes.
+    - Enfin, il détermine les emplacements de modification précis.
+  
+  - 😼 **Réparation** :
+    - Agentless prend les emplacements de modification et génère plusieurs correctifs candidats au format diff simple.
+    - Il effectue un filtrage des tests.
+    - Puis, il re-classe tous les correctifs restants pour en sélectionner un à soumettre.
+      
       
    
 
