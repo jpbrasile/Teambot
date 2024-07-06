@@ -63,7 +63,8 @@ Chaque bot personnel dispose de :
 
 #### Capacités du bot
 
-![image](https://github.com/jpbrasile/Teambot/assets/8331027/f114b147-9c50-4171-b769-1de37d04be22)
+![image](https://github.com/jpbrasile/Teambot/assets/8331027/3cea2a31-ddee-4c63-9089-45399bf47721)
+
 
 
 
@@ -641,8 +642,9 @@ Claude Engineer est une interface en ligne de commande (CLI) interactive qui exp
        - **Ma conclusion** : le code est très spécifique pour valider les performances de tel ou tel LLM par rapport à SWE Bench. L'utiliser pour corriger un répertoire particulier demanderait trop de modifications
       
   **6/7/2024**
-|**Agency Swarm](https://github.com/VRSEN/agency-swarm/tree/main)
-  - 🤖 Agency Swarm prend maintenant en charge les modèles open source, offrant une flexibilité accrue.
+  
+[**Agency Swarm**](https://github.com/VRSEN/agency-swarm/tree/main)
+- 🤖 Agency Swarm prend maintenant en charge les modèles open source, offrant une flexibilité accrue.
 - 🌐 Vous pouvez utiliser des modèles comme Anthropic, Google Gemini, et Llama 3 localement.
 - 🛠️ L'assistance API V2 introduit de nouvelles fonctionnalités améliorant les performances des agents.
 - 📂 L'outil de recherche de fichiers remplace l'ancien outil de récupération, simplifiant le traitement des données.
