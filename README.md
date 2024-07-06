@@ -63,6 +63,10 @@ Chaque bot personnel dispose de :
 
 #### Capacités du bot
 
+![image](https://github.com/jpbrasile/Teambot/assets/8331027/f114b147-9c50-4171-b769-1de37d04be22)
+
+
+
 Le bot doit pouvoir :
 
 - **Prendre** des données :
@@ -627,7 +631,23 @@ Claude Engineer est une interface en ligne de commande (CLI) interactive qui exp
     - Agentless prend les emplacements de modification et génère plusieurs correctifs candidats au format diff simple.
     - Il effectue un filtrage des tests.
     - Puis, il re-classe tous les correctifs restants pour en sélectionner un à soumettre.
+
+    - Pour le [portage sur Windows, avec sonnet 3.5](https://chatgpt.com/share/01cc65fc-db23-4541-b67a-eb02bf3d9a09), il faut
+    - modifier agentless\util\api_requests.py
+       - faire ` $env:PYTHONPATH = "$env:PYTHONPATH;$(Get-Location)
+       - `python agentless/fl/localize.py --file_level --related_level --fine_grain_line_level --output_folder C:\Users\test\Documents\TeambotV1\Agentless\results`
+       - mettre sonnet 3.5 dans `\Agentless\agentless\util\api_requests.py
+       - Nous avons également modifié repair.py pour pointer sur les API Anthropic.
+       - **Ma conclusion** : le code est très spécifique pour valider les performances de tel ou tel LLM par rapport à SWE Bench. L'utiliser pour corriger un répertoire particulier demanderait trop de modifications
       
-      
-   
+  **6/7/2024**
+|**Agency Swarm](https://github.com/VRSEN/agency-swarm/tree/main)
+  - 🤖 Agency Swarm prend maintenant en charge les modèles open source, offrant une flexibilité accrue.
+- 🌐 Vous pouvez utiliser des modèles comme Anthropic, Google Gemini, et Llama 3 localement.
+- 🛠️ L'assistance API V2 introduit de nouvelles fonctionnalités améliorant les performances des agents.
+- 📂 L'outil de recherche de fichiers remplace l'ancien outil de récupération, simplifiant le traitement des données.
+- 🎛️ Les nouveaux paramètres incluent la limitation du nombre de jetons et la stratégie de troncature des prompts.
+- 🔧 Vous pouvez spécifier la température et les outils utilisés par l'assistant pour des résultats optimisés.
+- 💾 Mode JSON et modèles fine-tunés peuvent être utilisés directement dans chaque assistant.
+- 🧑‍💻 Installation et configuration détaillées pour utiliser l'API assistant et les modèles open source.
 
