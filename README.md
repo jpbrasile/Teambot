@@ -653,3 +653,14 @@ Claude Engineer est une interface en ligne de commande (CLI) interactive qui exp
 - 💾 Mode JSON et modèles fine-tunés peuvent être utilisés directement dans chaque assistant.
 - 🧑‍💻 Installation et configuration détaillées pour utiliser l'API assistant et les modèles open source.
 
+**9/7/2024**
+- Nous avons un compte sur la plateforme  [**DeepSeek**](https://platform.deepseek.com/api_keys) permettant des API sur DeepSeekCoder V2 en particulier
+- [**Web scraping à partir d'une URL**](https://www.youtube.com/watch?v=QxHE4af5BQE&t=3s)
+- 🌐 En 2024, plusieurs startups se tournent vers le scraping web pour améliorer la pertinence des réponses et des recherches.
+- 🤖 Mendable a lancé Firecrawl, outil spécialisé utilisant de grands modèles de langage pour le scraping web.
+- 📚 Gina AI propose Reader API pour extraire des données de sites web sans clé API.
+- 💻 ScrapeGraph AI est un projet open source complexe utilisant des modules Python pour créer des graphiques à partir de données scrapées.
+- 💰 Comparaison des coûts d'utilisation de Beautiful Soup, Gina AI et Mendable pour le scraping web.
+- 📊 Utilisation de Tik token pour mesurer le coût de tokenisation dans le scraping web.
+- 🧩 Extraction de données structurées à partir des sites concurrents pour une analyse comparative des produits.
+- 🚀 Utilisation de GPT-4 pour extraire des informations spécifiques sur les prix des concurrents à partir des données scrapées.
